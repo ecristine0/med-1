@@ -1,0 +1,162 @@
+-- -----------------------------------------------------
+-- Inserindo pessoas (pacientes e cuidadores)
+-- -----------------------------------------------------
+INSERT INTO banco.pessoa (pessoa_nome, pessoa_email, pessoa_senha, pessoa_tipo, pessoa_data_nascimento, pessoa_peso, pessoa_altura) VALUES
+('João Silva', 'joao@email.com', 'senha123', 'Paciente', '1955-08-20', 70, 1.70),
+('Maria Oliveira', 'maria@email.com', 'senha123', 'Paciente', '1958-02-15', 65, 1.60),
+('Carlos Souza', 'carlos@email.com', 'senha123', 'Paciente', '1948-12-01', 80, 1.75),
+('Ana Paula', 'ana@email.com', 'senha123', 'Cuidador', '1980-03-10', 60, 1.65),
+('Ricardo Lima', 'ricardo@email.com', 'senha123', 'Cuidador', '1975-07-22', 75, 1.80);
+
+-- -----------------------------------------------------
+-- Inserindo cuidados (vinculando cuidador e paciente)
+-- -----------------------------------------------------
+INSERT INTO banco.cuidado (cuidado_nome, cuidado_data_nas, cuidado_foto, fk_pessoa_cuidador, fk_pessoa_paciente) VALUES
+('Cuidado João', '1955-08-20', 'foto_joao.jpg', 4, 1),
+('Cuidado Maria', '1958-02-15', 'foto_maria.jpg', 4, 2),
+('Cuidado Carlos', '1948-12-01', 'foto_carlos.jpg', 5, 3);
+-- -----------------------------------------------------
+-- Inserindo medicamentos
+-- -----------------------------------------------------
+INSERT INTO `banco`.`medicamento`
+(
+    `medicamento_nome`,
+    `medicamento_foto`,
+    `medicamento_laboratorio`,
+    `medicamento_categoria`,
+    `medicamento_obervacao`
+)
+VALUES
+-INSERT INTO `banco`.`medicamento`
+(
+    `medicamento_nome`,
+    `medicamento_foto`,
+    `medicamento_laboratorio`,
+    `medicamento_categoria`,
+    `medicamento_obervacao`
+)
+
+-- Dor e febre
+('Dipirona', '/foto/dipirona.png', 'Genérico', 'Dor e febre', 'Analgésico e antitérmico. Utilizar conforme orientação profissional.'),
+
+('Paracetamol', '/foto/paracetamol.png', 'Genérico', 'Dor e febre', 'Analgésico e antitérmico. Utilizar conforme orientação profissional.'),
+
+('Ácido acetilsalicílico', '/foto/acidoacetilsalicilico.png', 'Genérico', 'Dor e febre', 'Medicamento com ação analgésica e anti-inflamatória.'),
+
+('Ibuprofeno', '/foto/ibuprofeno.png', 'Genérico', 'Dor e inflamação', 'Anti-inflamatório não esteroidal.'),
+('Dipirona', 'dipirona.jpg', 'Genérico', 'Dor e febre', 'Analgésico e antitérmico. Usar conforme orientação da bula ou profissional de saúde.'),
+('Paracetamol', '/foto/paracetamol.jpg', 'Genérico', 'Dor e febre', 'Analgésico e antitérmico. Atenção à dose máxima diária e ao uso concomitante de outros medicamentos com paracetamol.'),
+('Ácido acetilsalicílico', 'aas.jpg', 'Genérico', 'Dor e inflamação', 'Analgésico e anti-inflamatório. Algumas apresentações possuem indicação cardiovascular específica.'),
+
+('Aceclofenaco', '/foto/aceclofenaco.png', 'Genérico', 'Dor e inflamação', 'Anti-inflamatório não esteroidal.'),
+
+-- Dor muscular e cólicas
+('Ciclobenzaprina', '/foto/ciclobenzaprina.png', 'Genérico', 'Dor muscular', 'Relaxante muscular utilizado conforme orientação profissional.'),
+
+('Butilbrometo de escopolamina + Dipirona', '/foto/butilbrometodescopolaminadipirona.png', 'Genérico', 'Cólicas e dor', 'Combinação com ação antiespasmódica e analgésica.'),
+
+('Dorflex Max', '/foto/dorflexMax.png', 'Dorflex', 'Dor muscular', 'Medicamento utilizado para alívio de dores musculares.'),
+-- Dor e inflamação
+('Aceclofenaco', '/foto/aceclofenaco.jpg', 'Genérico', 'Dor e inflamação', 'Anti-inflamatório não esteroidal. Deve ser utilizado conforme orientação profissional.'),
+('Ciclobenzaprina', '/foto/ciclobenzaprina.jpg', 'Genérico', 'Dor muscular', 'Relaxante muscular utilizado em situações específicas de espasmo muscular.'),
+('Butilbrometo de escopolamina + Dipirona', '/foto/butilbrometo-escopolaminadipirona.jpg', 'Genérico', 'Cólicas e dor', 'Combinação com ação antiespasmódica e analgésica, utilizada para cólicas e dores específicas.'),
+('Dipirona + Orfenadrina + Cafeína', '/foto/dipironaorfenadrinacafeina.jpg', 'Dorflex', 'Dor', 'Combinação analgésica e relaxante muscular utilizada para dores musculares e cefaleias.'),
+
+-- Alergia
+('Cetirizina', '/foto/cetirizina.png', 'Genérico', 'Alergia', 'Antialérgico utilizado para aliviar sintomas alérgicos.'),
+
+('Fexofenadina', '/foto/fexofenadina.png', 'Genérico', 'Alergia', 'Antialérgico utilizado em casos de rinite e urticária.'),
+
+('Fluticasona', '/foto/fluticasona.png', 'Genérico', 'Alergia nasal', 'Corticoide utilizado no controle dos sintomas de rinite.'),
+('Fexofenadina', '/foto/fexofenadina.jpg', 'Genérico', 'Alergia', 'Antialérgico utilizado principalmente em rinite alérgica e urticária.'),
+('Loratadina', '/foto/loratadina.jpg', 'Genérico', 'Alergia', 'Antialérgico utilizado para sintomas de rinite e outras manifestações alérgicas.'),
+('Cetirizina', '/foto/cetirizina.jpg', 'Genérico', 'Alergia', 'Antialérgico utilizado em rinite alérgica, urticária e outras condições alérgicas.'),
+('Fluticasona', '/foto/fluticasona.jpg', 'Genérico', 'Alergia nasal', 'Corticoide nasal utilizado principalmente no controle de sintomas de rinite.'),
+
+-- Tosse e secreções
+('Acetilcisteína', '/foto/acetilcisteína.png', 'Genérico', 'Tosse e secreções', 'Mucolítico que auxilia na fluidificação das secreções.'),
+
+('Ambroxol', '/foto/ambroxol.png', 'Genérico', 'Tosse e secreções', 'Expectorante utilizado para auxiliar na eliminação de secreções.'),
+('Acetilcisteína', '/foto/acetilcisteina.jpg', 'Genérico', 'Tosse e secreções', 'Mucolítico que auxilia na fluidificação das secreções respiratórias.'),
+('Ambroxol', '/foto/ambroxol.jpg', 'Genérico', 'Tosse e secreções', 'Expectorante/mucolítico utilizado para auxiliar na eliminação de secreções respiratórias.'),
+
+-- Estômago
+('Omeprazol', '/foto/omeprazol.png', 'Genérico', 'Estômago e refluxo', 'Medicamento utilizado para reduzir a produção de ácido gástrico.'),
+
+-- Antibióticos e antivirais
+('Amoxicilina', '/foto/amoxicilina.png', 'Genérico', 'Antibiótico', 'Antibiótico utilizado no tratamento de infecções bacterianas, sob prescrição.'),
+('Omeprazol', '/foto/omeprazol.jpg', 'Genérico', 'Estômago e refluxo', 'Redutor da produção de ácido gástrico, utilizado em condições específicas de acidez e refluxo.'),
+('Hidróxido de alumínio + Hidróxido de magnésio', '/foto/hidroxidoaluminiomagnesio.jpg', 'Genérico', 'Azia e acidez', 'Antiácido utilizado para alívio de sintomas relacionados à acidez gástrica.'),
+
+('Amoxicilina + Clavulanato', '/foto/amoxicilinaclavulanato.png', 'Genérico', 'Antibiótico', 'Combinação de antibióticos utilizada sob prescrição médica.'),
+-- Náusea e enjoo
+('Dimenidrinato', '/foto/dimenidrinato.jpg', 'Genérico', 'Náusea e enjoo', 'Utilizado para prevenção e tratamento de náuseas, vômitos e enjoo em situações específicas.'),
+('Metoclopramida', '/foto/metoclopramida.jpg', 'Genérico', 'Náusea e vômito', 'Medicamento utilizado em situações específicas de náuseas e vômitos. Pode causar efeitos adversos neurológicos.'),
+
+('Aciclovir', '/foto/aciclovir.png', 'Genérico', 'Antiviral', 'Medicamento antiviral utilizado conforme prescrição.'),
+-- Intestino
+('Bisacodil', '/foto/bisacodil.jpg', 'Genérico', 'Intestino', 'Laxante utilizado para tratamento de constipação em situações específicas.'),
+
+('Albendazol', '/foto/albendazol.png', 'Genérico', 'Antiparasitário', 'Medicamento utilizado no tratamento de determinadas verminoses.'),
+-- Verminoses
+('Albendazol', '/foto/albendazol.jpg', 'Genérico', 'Antiparasitário', 'Antiparasitário utilizado no tratamento de determinadas verminoses.'),
+
+('Cetoconazol', '/foto/cetoconazol.png', 'Genérico', 'Antifúngico', 'Medicamento utilizado no tratamento de infecções causadas por fungos.'),
+-- Antibióticos
+('Amoxicilina', '/foto/amoxicilina.jpg', 'Genérico', 'Antibiótico', 'Antibiótico utilizado no tratamento de determinadas infecções bacterianas. Uso sob prescrição e orientação profissional.'),
+('Amoxicilina + Clavulanato', '/foto/amoxicilina-clavulanato.jpg', 'Genérico', 'Antibiótico', 'Antibiótico utilizado para determinadas infecções bacterianas. Uso sob prescrição e orientação profissional.'),
+
+-- Pressão arterial
+('Anlodipino', '/foto/anlodipino.png', 'Genérico', 'Hipertensão', 'Medicamento utilizado no tratamento da hipertensão arterial.'),
+-- Antiviral
+('Aciclovir', '/foto/aciclovir.jpg', 'Genérico', 'Antiviral', 'Antiviral utilizado no tratamento de infecções causadas por determinados vírus, como herpes.'),
+
+('Hidroclorotiazida', '/foto/hidroclorotiazida.png', 'Genérico', 'Hipertensão', 'Diurético utilizado no tratamento da hipertensão arterial.'),
+-- Antifúngico
+('Cetoconazol', '/foto/cetoconazol.jpg', 'Genérico', 'Antifúngico', 'Antifúngico utilizado no tratamento de determinadas infecções causadas por fungos.'),
+
+('Losartana', '/foto/losartana.png', 'Genérico', 'Hipertensão', 'Medicamento utilizado no tratamento da hipertensão arterial.'),
+-- Hipertensão
+('Losartana', '/foto/losartana.jpg', 'Genérico', 'Hipertensão', 'Medicamento utilizado principalmente no tratamento da hipertensão e em algumas condições cardiovasculares.'),
+('Anlodipino', '/foto/anlodipino.jpg', 'Genérico', 'Hipertensão', 'Medicamento utilizado no tratamento da hipertensão e da angina em situações específicas.'),
+('Hidroclorotiazida', '/foto/hidroclorotiazida.jpg', 'Genérico', 'Hipertensão', 'Diurético utilizado principalmente no tratamento da hipertensão e de determinados edemas.'),
+
+-- Diabetes e colesterol
+('Metformina', '/foto/metformina.png', 'Genérico', 'Diabetes', 'Medicamento utilizado no tratamento do diabetes tipo 2.'),
+-- Diabetes
+('Metformina', '/foto/metformina.jpg', 'Genérico', 'Diabetes', 'Medicamento utilizado principalmente no tratamento do diabetes mellitus tipo 2.'),
+
+('Sinvastatina', '/foto/sinvastatina.png', 'Genérico', 'Colesterol', 'Medicamento utilizado para auxiliar no controle do colesterol.'),
+-- Tireoide
+('Levotiroxina', '/foto/levotiroxina.jpg', 'Genérico', 'Tireoide', 'Hormônio utilizado para reposição hormonal em casos de hipotireoidismo.'),
+
+-- Pele
+('Adapaleno', '/foto/adapaleno.png', 'Genérico', 'Pele e acne', 'Medicamento tópico utilizado no tratamento da acne.'),
+-- Colesterol
+('Sinvastatina', '/foto/sinvastatina.jpg', 'Genérico', 'Colesterol', 'Medicamento utilizado para redução do colesterol e do risco cardiovascular em pacientes indicados.'),
+('Atorvastatina', '/foto/atorvastatina.jpg', 'Genérico', 'Colesterol', 'Medicamento utilizado para redução do colesterol e prevenção de eventos cardiovasculares em pacientes indicados.'),
+
+('Peróxido de benzoíla', '/foto/peroxidodebenzoila.png', 'Genérico', 'Pele e acne', 'Produto tópico utilizado no tratamento da acne.'),
+-- Asma e vias respiratórias
+('Salbutamol', '/foto/salbutamol.jpg', 'Genérico', 'Asma e broncoespasmo', 'Broncodilatador utilizado para alívio de broncoespasmo em condições respiratórias específicas.'),
+('Budesonida', '/foto/budesonida.jpg', 'Genérico', 'Asma e rinite', 'Corticoide utilizado no controle da inflamação das vias respiratórias em condições específicas.'),
+
+-- Outros
+('Fluoxetina', '/foto/fluoxetina.jpeg', 'Genérico', 'Antidepressivo', 'Medicamento de uso controlado, conforme prescrição médica.'),
+
+('Lubrificante ocular', '/foto/lubrificanteocular.png', 'Genérico', 'Saúde dos olhos', 'Produto utilizado para aliviar o ressecamento ocular.'),
+-- Pele
+('Adapaleno', '/foto/adapaleno.jpg', 'Genérico', 'Pele e acne', 'Medicamento tópico utilizado principalmente no tratamento da acne.'),
+('Peróxido de benzoíla', '/foto/peroxidobenzoila.jpg', 'Genérico', 'Pele e acne', 'Medicamento tópico utilizado no tratamento da acne.'),
+
+('Salbutamol', '/foto/salbutamol.png', 'Genérico', 'Problemas respiratórios', 'Broncodilatador utilizado conforme prescrição profissional.');
+-- Olhos
+('Lubrificante ocular', '/foto/lubrificanteocular.jpg', 'Genérico', 'Olhos', 'Utilizado para aliviar sintomas relacionados ao ressecamento ocular.');
+-- -----------------------------------------------------
+-- Inserindo prescrições (vinculando medicamento e cuidado)
+-- -----------------------------------------------------
+INSERT INTO banco.prescricao (medicamento_medicamento_id, cuidado_cuidado_id, cuidado_fk_pessoa_pessoa_id, cuidado_fk_pessoa_cuidador, prescricao_frequencia, prescricao_dosagem, prescricao_horario_primeira_dose, prescricao_data_inicio, prescricao_observacao) VALUES
+(1, 1, 1, 4, 3, 500, '2026-05-11 08:00:00', '2026-05-11', 'Tomar após café da manhã'),
+(2, 1, 1, 4, 2, 400, '2026-05-11 12:00:00', '2026-05-11', 'Tomar após almoço'),
+(3, 2, 2, 4, 3, 500, '2026-05-11 08:00:00', '2026-05-11', 'Completar o ciclo'),
+(4, 3, 3, 5, 1, 20, '2026-05-11 09:00:00', '2026-05-11', 'Tomar pela manhã');
